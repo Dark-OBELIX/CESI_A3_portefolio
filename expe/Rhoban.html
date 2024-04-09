@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhoban</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Fond blanc cassé */
+            font-family: Arial, sans-serif;
+            position: relative; /* Permet de positionner la flèche par rapport au body */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 50px); /* Réduit la hauteur du container pour laisser de la place à la flèche */
+            position: relative; /* Permet de positionner la flèche par rapport au container */
+        }
+
+        .circle {
+            text-decoration: none;
+            color: white;
+        }
+
+        .circle:hover {
+            opacity: 0.8;
+        }
+
+        /* Premier cercle avec du texte */
+        .texte-cercle {
+            width: 500px; /* Largeur du cercle */
+            height: 400px; /* Hauteur du cercle */
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px; /* Taille de police réduite */
+            font-weight: bold;
+            margin-right: 50px; /* Marge à droite pour l'espace entre les cercles */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px; /* Ajout de padding pour éviter le débordement du texte */
+        }
+
+        /* Deuxième cercle avec une image */
+        .image-cercle {
+            width: 400px; /* Largeur du cercle */
+            height: 400px; /* Hauteur du cercle */
+            border-radius: 50%;
+            overflow: hidden; /* Pour cacher le débordement de l'image */
+            margin-left: 50px; /* Marge à gauche pour l'espace entre les cercles */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-cercle img {
+            width: 100%; /* Taille de l'image réduite */
+            height: 100%; /* Pour maintenir le ratio de l'image */
+            object-fit: cover; /* Pour remplir complètement le conteneur en conservant le ratio */
+        }
+
+        /* Style de la flèche */
+        .fleche {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle texte-cercle">
+            <p>Rhoban</p>
+            <p>J'ai réalisé un stage de 4 mois à partir de janvier 2024 à Rhoban qui est un groupe de recherche du LABRI.</p>
+            <p>J'ai pendant ce stage travaillé entre autres sur le robot MegaBot.
+Mon travail a été aussi bien sur les vérins que sur l’ordinateur de bord mais aussi sur l’installation de ruban LED sur les pattes du robot.
+</p>
+        </div>
+        <div class="circle image-cercle">
+            <img src="megabot.jpg" alt="Image">
+        </div>
+    </div>
+    <!-- Flèche stylisée -->
+    <div class="fleche" onclick="window.history.back()"></div>
+</body>
+</html>
