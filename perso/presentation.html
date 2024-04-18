@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentation</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5; /* Fond blanc cassé */
-            font-family: Arial, sans-serif;
-            position: relative; /* Permet de positionner la flèche par rapport au body */
-        }
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #f5f5f5; /* Fond blanc cassé */
+    font-family: Arial, sans-serif;
 
+    background-image: url('medoc.jpg'); /* Utilisation de la syntaxe 'url()' */
+    background-size: cover; /* Pour que l'image couvre toute la page */
+    background-position: center; /* Pour centrer l'image */
+}
         .container {
             display: flex;
             justify-content: center;
@@ -59,10 +61,9 @@
         }
 
         .image-cercle img {
-            width: 80%; /* Taille de l'image réduite */
-            height: auto; /* Pour maintenir le ratio de l'image */
-            display: block;
-            margin: 10% auto; /* Centrer l'image verticalement */
+            width: 100%; /* Taille de l'image réduite */
+            height: 100%; /* Pour maintenir le ratio de l'image */
+            object-fit: cover; /* Pour remplir complètement le conteneur en conservant le ratio */
         }
 
         /* Style de la flèche */
@@ -88,7 +89,7 @@
             <p>Je suis maintenant développeur en informatique embarqué.</p>
         </div>
         <div class="circle image-cercle">
-            <img src="" alt="Image">
+            <img src="photo_moi.jpg" alt="Image">
         </div>
     </div>
     <!-- Flèche stylisée -->
