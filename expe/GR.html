@@ -51,22 +51,23 @@ body {
             padding: 20px; /* Ajout de padding pour éviter le débordement du texte */
         }
 
-        /* Deuxième cercle avec une image */
-        .image-cercle {
-            width: 400px; /* Largeur du cercle */
-            height: 400px; /* Hauteur du cercle */
-            border-radius: 50%;
-            overflow: hidden; /* Pour cacher le débordement de l'image */
-            margin-left: 50px; /* Marge à gauche pour l'espace entre les cercles */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
+.image-cercle {
+    width: 400px; /* Largeur du cercle */
+    height: 400px; /* Hauteur du cercle */
+    border-radius: 50%;
+    overflow: hidden; /* Pour cacher le débordement de l'image */
+    margin-left: 50px; /* Marge à gauche pour l'espace entre les cercles */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex; /* Utilisation de flexbox pour centrer l'image */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
 
-        .image-cercle img {
-            width: 80%; /* Taille de l'image réduite */
-            height: auto; /* Pour maintenir le ratio de l'image */
-            display: block;
-            margin: 10% auto; /* Centrer l'image verticalement */
-        }
+.image-cercle img {
+    width: 100%; /* Taille de l'image à 100% de la largeur du conteneur */
+    height: auto; /* Pour maintenir le ratio de l'image */
+    display: block;
+}
 
         /* Style de la flèche */
         .fleche {
@@ -92,7 +93,7 @@ Je continue régulièrement aussi à aider sur les salons que sont la robocup.</
 
         </div>
         <div class="circle image-cercle">
-            <img src="" alt="Image">
+            <img src="Atelier.jpeg" alt="Image">
         </div>
     </div>
     <!-- Flèche stylisée -->
